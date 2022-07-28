@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web form</title>
+</head>
+<body>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <p>Please enter your iris information below.</p>
+        <TABLE BORDER="0">
+            <TR>
+                <TD>Sepal Length (cm) </TD>
+                <TD>:<input type="text" placeholder="5.1" name="sl" required></TD>
+            </TR>
+            <TR>
+                <TD>Sepal Width (cm) </TD>
+                <TD>:<input type="text" placeholder="3.5" name="sw" required></TD>
+            </TR>
+            <TR>
+                <TD>Petal Width (cm) </TD>
+                <TD>:<input type="text" placeholder="0.2" name="pw" required></TD>
+            </TR>
+        </TABLE>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
